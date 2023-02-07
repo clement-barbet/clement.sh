@@ -34,6 +34,7 @@ declare module '$env/static/private' {
 	export const npm_config_cache: string;
 	export const XDG_MENU_PREFIX: string;
 	export const TERM_PROGRAM_VERSION: string;
+	export const GNOME_KEYRING_CONTROL: string;
 	export const NODE: string;
 	export const SSH_AUTH_SOCK: string;
 	export const COLOR: string;
@@ -44,15 +45,14 @@ declare module '$env/static/private' {
 	export const CLOUDSDK_PYTHON_ARGS: string;
 	export const EDITOR: string;
 	export const PWD: string;
-	export const XDG_SESSION_DESKTOP: string;
 	export const LOGNAME: string;
+	export const XDG_SESSION_DESKTOP: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_config_init_module: string;
 	export const SYSTEMD_EXEC_PID: string;
 	export const _: string;
 	export const XAUTHORITY: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
-	export const GJS_DEBUG_TOPICS: string;
 	export const MOTD_SHOWN: string;
 	export const GDM_LANG: string;
 	export const HOME: string;
@@ -70,7 +70,6 @@ declare module '$env/static/private' {
 	export const QT_QPA_PLATFORM: string;
 	export const npm_lifecycle_script: string;
 	export const CLOUDSDK_PYTHON: string;
-	export const GJS_DEBUG_OUTPUT: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const GNOME_SETUP_DISPLAY: string;
 	export const XDG_SESSION_CLASS: string;
@@ -104,7 +103,6 @@ declare module '$env/static/private' {
 	export const npm_config_scripts_prepend_node_path: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 	export const npm_node_execpath: string;
-	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const TERM_PROGRAM: string;
 	export const NODE_ENV: string;
 }
@@ -144,6 +142,7 @@ declare module '$env/dynamic/private' {
 		npm_config_cache: string;
 		XDG_MENU_PREFIX: string;
 		TERM_PROGRAM_VERSION: string;
+		GNOME_KEYRING_CONTROL: string;
 		NODE: string;
 		SSH_AUTH_SOCK: string;
 		COLOR: string;
@@ -154,15 +153,14 @@ declare module '$env/dynamic/private' {
 		CLOUDSDK_PYTHON_ARGS: string;
 		EDITOR: string;
 		PWD: string;
-		XDG_SESSION_DESKTOP: string;
 		LOGNAME: string;
+		XDG_SESSION_DESKTOP: string;
 		XDG_SESSION_TYPE: string;
 		npm_config_init_module: string;
 		SYSTEMD_EXEC_PID: string;
 		_: string;
 		XAUTHORITY: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
-		GJS_DEBUG_TOPICS: string;
 		MOTD_SHOWN: string;
 		GDM_LANG: string;
 		HOME: string;
@@ -180,7 +178,6 @@ declare module '$env/dynamic/private' {
 		QT_QPA_PLATFORM: string;
 		npm_lifecycle_script: string;
 		CLOUDSDK_PYTHON: string;
-		GJS_DEBUG_OUTPUT: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		GNOME_SETUP_DISPLAY: string;
 		XDG_SESSION_CLASS: string;
@@ -214,7 +211,6 @@ declare module '$env/dynamic/private' {
 		npm_config_scripts_prepend_node_path: string;
 		GIO_LAUNCHED_DESKTOP_FILE_PID: string;
 		npm_node_execpath: string;
-		GIO_LAUNCHED_DESKTOP_FILE: string;
 		TERM_PROGRAM: string;
 		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;

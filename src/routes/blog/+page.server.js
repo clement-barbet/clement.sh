@@ -16,8 +16,6 @@ function stringToDate(string_date) {
   console.log(`${day} ${month} ${year}`)
 
   const date = new Date(year, month - 1, parseInt(day) )
-
-  console.log(date)
   return date;
 
 }
