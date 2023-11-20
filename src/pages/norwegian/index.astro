@@ -1,0 +1,61 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import { getCollection } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
+
+const posts = (await getCollection("norwegian")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      main {
+        width: 960px;
+      }
+
+      .title {
+        margin: 0;
+        color: rgb(var(--black));
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Learn Norwegian</h1>
+      <div class="flex space-x-5">
+        <div>
+          <p>Here are my visual notes on the book “Le norvégien sans peine”.</p>
+          <p>
+            You learn best a language where you don’t make translation in
+            another language but you only “think” in this language.
+          </p>
+          <p>That’s why all my notes are drawing and emojis.</p>
+          <p>The drawings are made with Excalidraw in Obsidian.</p>
+        </div>
+        <img class="w-5/12" src="/norvegien-sans-peine.png" />
+      </div>
+      <h2>Assimil Leksjon</h2>
+      <section>
+        <ul>
+          {
+            posts.map((post) => (
+              <li>
+                <a href={`/norwegian/${post.slug}/`}>
+                  <p class="title">{post.data.title}</p>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

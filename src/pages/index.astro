@@ -1,0 +1,28 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main class="">
+      <h1 class="font-bold text-5xl mb-36">Clément Barbet Website</h1>
+      <div class="flex space-x-5">
+        <img src="avatar.png" />
+        <div>
+          <h2>About me</h2>
+          <p>✉️ <a href="mailto:contact@clement.sh">contact@clement.sh</a></p>
+          <h2>My Notes</h2>
+          <h3>🗣 Language Notes</h3>
+          <a href="/norwegian">🇳🇴 Norwegian</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
